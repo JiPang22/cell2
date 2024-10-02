@@ -6,7 +6,7 @@ real * 16, dimension(imax) :: time, voltage
 character(len = 30) file30_400
 character(len = 100) line
 
-
+open(3, file = 'bb')
 file30_400 = './30/C1Trace00000.txt'
 
 open(1, file=file30_400, status='old', action='read', iostat=io_status)
@@ -55,7 +55,7 @@ close(2)
 sumIM = 0.
 sumRE = 0.
 
-open(3, file = 'bb')
+
 dt = 1.e-7
 
 om_ext=400.
